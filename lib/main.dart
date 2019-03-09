@@ -95,6 +95,9 @@ class _MyHomePageState extends State<MyHomePage> {
             SwitchPreferences(prefKey: 'test_key',title: 'test',summary: 'test summary',icon: Icons.add,onValueChange: (value){
 
             },),
+            ListPreferences<String>(prefKey: 'test_list',title: 'Language',summary:'select you lang',icon: Icons.language,entries: ['فارسی',"English"],entryValues: ['fa','en'],onValueChange: (value){
+
+            },),
 
           ],
         ),
