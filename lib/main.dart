@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences_widgets/shared_preferences_widgets.dart';
 
 void main() => runApp(MyApp());
 
@@ -91,13 +92,10 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
+            SwitchPreferences(prefKey: 'test_key',title: 'test',summary: 'test summary',icon: Icons.add,onValueChange: (value){
+
+            },),
+
           ],
         ),
       ),
